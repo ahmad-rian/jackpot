@@ -17,6 +17,8 @@ Jackpott's adalah aplikasi web untuk layanan perawatan sepatu premium. Aplikasi 
 - Tailwind CSS
 - Framer Motion
 - React Router
+- Radix
+- Particles bg
 
 ## Instalasi
 
