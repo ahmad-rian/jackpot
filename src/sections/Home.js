@@ -1,16 +1,10 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
-import { Parallax } from 'react-parallax';
 
 function Home() {
   return (
-    <Parallax
-      // // bgImage="/img/shoe-background.jpg"
-      // strength={500}
-      // className="min-h-screen flex items-center justify-center relative"
-    >
-      <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+    <div className="min-h-screen flex items-center justify-center relative">
       <div className="text-center z-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto relative">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
@@ -67,7 +61,7 @@ function Home() {
           </motion.a>
         </div>
       </div>
-    </Parallax>
+    </div>
   );
 }
 
