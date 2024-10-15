@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
 
 function Footer() {
@@ -9,12 +9,12 @@ function Footer() {
   ];
 
   const quickLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Services', path: '/services' },
-    { name: 'Testimoni', path: '/testimonials' },
-    { name: 'Repainting', path: '/repainting' },
-    { name: 'Express', path: '/express' },
-    { name: 'About Us', path: '/about' },
+    { name: 'Home', to: 'home' },
+    { name: 'Services', to: 'services' },
+    { name: 'Testimoni', to: 'testimonials' },
+    { name: 'Repainting', to: 'repainting' },
+    { name: 'Express', to: 'express' },
+    { name: 'About', to: 'about' },
   ];
 
   return (
@@ -41,12 +41,19 @@ function Footer() {
             <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-pink-500 text-transparent bg-clip-text">Quick Links</h3>
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
-                <motion.li key={link.path}
+                <motion.li key={link.to}
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.1 }}
                 >
-                  <Link to={link.path} className="text-gray-300 hover:text-transparent hover:bg-gradient-to-r from-orange-400 to-pink-500 hover:bg-clip-text transition duration-300">
+                  <Link 
+                    to={link.to}
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    className="text-gray-300 hover:text-transparent hover:bg-gradient-to-r from-orange-400 to-pink-500 hover:bg-clip-text transition duration-300 cursor-pointer"
+                  >
                     {link.name}
                   </Link>
                 </motion.li>

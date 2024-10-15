@@ -11,7 +11,7 @@ function Header() {
   const menuItems = [
     { name: 'Home', to: 'home' },
     { name: 'Services', to: 'services' },
-    { name: 'Testimonials', to: 'testimonials' },
+    { name: 'Testimoni', to: 'testimonials' },
     { name: 'Repainting', to: 'repainting' },
     { name: 'Express', to: 'express' },
     { name: 'About', to: 'about' },
